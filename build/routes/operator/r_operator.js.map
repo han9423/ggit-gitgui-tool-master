@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "r_operator.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "src/routes/operator/r_operator.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,SAAA,EAAA,SAAA,EAAA,OAAA,EAAA,OAAA,EAAA;;EAAA,OAAA,GAAU,OAAA,CAAQ,SAAR;;EACV,CAAA,CAAE,OAAF,EAAW,SAAX,EAAuB,SAAvB,CAAA,GAAqC,OAAA,CAAQ,oCAAR,CAArC;;EAGA,MAAA,GAAS,OAAO,CAAC,MAAR,CAAA;;EAET,MAAM,CAAC,IAAP,CAAY,UAAZ,EAAwB,OAAxB;;EACA,MAAM,CAAC,IAAP,CAAY,YAAZ,EAA0B,SAA1B;;EACA,MAAM,CAAC,IAAP,CAAY,YAAZ,EAA0B,SAA1B;;EACA,MAAM,CAAC,OAAP,GAAiB;AATjB",
+  "sourcesContent": [
+    "express = require 'express'\n{ addTemp, addCommit , addRemote } = require '../../controller/operator/operator'\n\n\nrouter = express.Router()\n\nrouter.post('/addtemp', addTemp)\nrouter.post('/addCommit', addCommit)\nrouter.post('/addRemote', addRemote)\nmodule.exports = router\n"
+  ]
+}

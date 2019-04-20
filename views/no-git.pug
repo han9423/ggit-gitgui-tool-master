@@ -1,0 +1,25 @@
+extends layout
+
+
+
+block css 
+    link(rel="stylesheet", href="css/no-git.css")
+
+block scriptst
+    script(src="javascripts/libs/jquery.min.js")
+
+block main
+    div.no-git
+        section 您的浏览器还未安装git
+
+
+
+block scriptsb
+    script(src="javascripts/no-git.js")
+
+block footer
+    footer  
+        div.introduction
+            a(href="https://github.com/sewerlabour?tab=repositories")
+                p GGit git-gui-tool
+                span powered by wanghan

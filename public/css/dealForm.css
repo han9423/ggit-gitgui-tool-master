@@ -1,0 +1,249 @@
+@charset "UTF-8";
+.dealForm {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 32vw;
+  height: 90vh; }
+  .dealForm .gitConfig {
+    width: 28vw;
+    height: 100%; }
+    .dealForm .gitConfig ul {
+      width: 28vw;
+      height: 50%; }
+      .dealForm .gitConfig ul li {
+        margin: 15px auto;
+        list-style: none;
+        width: 25vw;
+        height: 60px;
+        background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+        box-shadow: 2px 5px 10px #e4e4e4;
+        border: 0.5px solid #cccccc;
+        -webkit-transition: all 0.6s;
+        -ms-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .dealForm .gitConfig ul li:active {
+          position: relative;
+          top: 3px; }
+        .dealForm .gitConfig ul li:hover {
+          -webkit-transform: scale(1.04);
+          -ms-transform: scale(1.04);
+          -o-transform: scale(1.04);
+          -moz-transform: scale(1.04);
+          box-shadow: 2px 2px 5px #e4e4e4; }
+        .dealForm .gitConfig ul li div {
+          display: inline-block; }
+        .dealForm .gitConfig ul li .i {
+          width: 30px;
+          height: 30px;
+          background-size: cover;
+          background-image: url("../asset/user.svg"); }
+        .dealForm .gitConfig ul li .k {
+          width: 30px;
+          height: 30px;
+          background-size: cover;
+          background-image: url("../asset/钥匙.svg"); }
+        .dealForm .gitConfig ul li .s {
+          width: 30px;
+          height: 30px;
+          background-size: cover;
+          background-image: url("../asset/配置管理.svg"); }
+    .dealForm .gitConfig .display-sitting {
+      width: 28vw;
+      height: 50%; }
+      .dealForm .gitConfig .display-sitting div {
+        width: 28vw;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .dealForm .gitConfig .display-sitting div p {
+          margin-bottom: 15px;
+          width: 24vw;
+          height: 35px; }
+          .dealForm .gitConfig .display-sitting div p input {
+            width: 20vw;
+            height: 30px; }
+        .dealForm .gitConfig .display-sitting div button {
+          z-index: 10;
+          width: 80px;
+          height: 35px;
+          background-color: #127cf5;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          -webkit-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          -moz-transition: all 1s ease; }
+          .dealForm .gitConfig .display-sitting div button:hover {
+            background-color: rgba(8, 94, 192, 0.938); }
+          .dealForm .gitConfig .display-sitting div button:active {
+            -webkit-transform: scale(0.6);
+            -ms-transform: scale(0.6);
+            -o-transform: scale(0.6);
+            -moz-transform: scale(0.6); }
+        .dealForm .gitConfig .display-sitting div textarea {
+          padding: 10px;
+          margin-top: 20px;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          resize: none;
+          font-size: 15px;
+          outline: none; }
+      .dealForm .gitConfig .display-sitting .gitlist {
+        font-size: 15px; }
+  .dealForm .information {
+    overflow: hidden;
+    width: 28vw;
+    height: 90vh; }
+    .dealForm .information .init_infor {
+      width: 28vw;
+      height: 35vh; }
+      .dealForm .information .init_infor .current_info {
+        text-align: center;
+        width: 28vw;
+        height: 10vh;
+        line-height: 10vh; }
+      .dealForm .information .init_infor .action_now {
+        width: 27vw;
+        height: 25vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative; }
+        .dealForm .information .init_infor .action_now button {
+          border: none;
+          margin-top: 10px;
+          outline: none;
+          width: 90px;
+          height: 35px;
+          text-align: center;
+          line-height: 25px;
+          background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+          box-shadow: 2px 5px 10px #e4e4e4;
+          overflow: hidden; }
+          .dealForm .information .init_infor .action_now button:active {
+            position: relative;
+            top: 3px; }
+        .dealForm .information .init_infor .action_now .inall {
+          width: 27vw;
+          height: 20px;
+          position: absolute;
+          bottom: 0; }
+          .dealForm .information .init_infor .action_now .inall label {
+            vertical-align: top;
+            float: right; }
+          .dealForm .information .init_infor .action_now .inall input {
+            float: right;
+            width: 20px;
+            height: 20px;
+            outline: none;
+            margin-left: 5px; }
+          .dealForm .information .init_infor .action_now .inall:after {
+            content: '';
+            clear: both;
+            display: block; }
+    .dealForm .information .repoContainer {
+      position: absolute;
+      bottom: 0;
+      width: 28vw;
+      height: 55vh;
+      overflow: hidden; }
+      .dealForm .information .repoContainer .repoWrapper {
+        width: 30vw;
+        height: 55vh;
+        overflow-y: auto; }
+        .dealForm .information .repoContainer .repoWrapper .repo {
+          display: flex;
+          justify-content: space-around;
+          align-content: flex-start;
+          flex-wrap: wrap;
+          width: 28vw; }
+    .dealForm .information .dir {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      .dealForm .information .dir:hover {
+        background-color: #eeeeee; }
+      .dealForm .information .dir span {
+        display: inline-block;
+        width: 100px;
+        height: 20px;
+        text-overflow: ellipsis;
+        text-align: center; }
+      .dealForm .information .dir .folder {
+        background: url(../asset/文件夹未共享.svg);
+        background-size: cover;
+        width: 55px;
+        height: 55px; }
+      .dealForm .information .dir .img {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_jpg.svg); }
+      .dealForm .information .dir .gif {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_gif.svg); }
+      .dealForm .information .dir .png {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_png.svg); }
+      .dealForm .information .dir .java {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_java.svg); }
+      .dealForm .information .dir .php {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_php.svg); }
+      .dealForm .information .dir .html {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_html.svg); }
+      .dealForm .information .dir .css {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_css.svg); }
+      .dealForm .information .dir .txt {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_txt.svg); }
+      .dealForm .information .dir .bin {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_bin.svg); }
+      .dealForm .information .dir .js {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_js.svg); }
+      .dealForm .information .dir .zip {
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+        background: url(../asset/iconfinder_zip.svg); }
+    .dealForm .information .marked {
+      background-color: #eeeeee; }
+
+/*# sourceMappingURL=dealForm.css.map */

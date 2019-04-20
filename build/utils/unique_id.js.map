@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "unique_id.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/utils/unique_id.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA,IAAI,CAAC,MAAM,CAAC,QAAZ,CAAqB,EAArB,CAAwB,CAAC,MAAzB,CAAgC,CAAhC;AAAA",
+  "sourcesContent": [
+    "Math.random.toString(36).substr(2)\n"
+  ]
+}

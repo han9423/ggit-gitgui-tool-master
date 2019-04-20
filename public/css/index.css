@@ -1,0 +1,537 @@
+@charset "UTF-8";
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh; }
+  footer .introduction {
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -25px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background 0.6s ease;
+    -ms-transition: background 0.6s ease;
+    -o-transition: background 0.6s ease;
+    -moz-transition: background 0.6s ease; }
+    footer .introduction a {
+      text-decoration: none;
+      color: #242424; }
+      footer .introduction a p {
+        font-size: 20px; }
+      footer .introduction a span {
+        font-size: 10px; }
+    footer .introduction:hover {
+      background: #ebebeb; }
+
+main {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 90vh; }
+  main .logo {
+    width: 300px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 20px;
+    align-self: flex-start; }
+    main .logo .profile {
+      width: 60px;
+      height: 60px;
+      background: url(../asset/20181203205633.jpg);
+      background-size: cover;
+      display: inline-block; }
+    main .logo span {
+      width: 50px;
+      font-size: 30px;
+      font-weight: bold; }
+  main .dealForm {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 32vw;
+    height: 90vh; }
+    main .dealForm .gitConfig {
+      width: 28vw;
+      height: 100%; }
+      main .dealForm .gitConfig ul {
+        width: 28vw;
+        height: 50%; }
+        main .dealForm .gitConfig ul li {
+          margin: 15px auto;
+          list-style: none;
+          width: 25vw;
+          height: 60px;
+          background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+          box-shadow: 2px 5px 10px #e4e4e4;
+          border: 0.5px solid #cccccc;
+          -webkit-transition: all 0.6s;
+          -ms-transition: all 0.6s;
+          -o-transition: all 0.6s;
+          -moz-transition: all 0.6s;
+          font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          main .dealForm .gitConfig ul li:active {
+            position: relative;
+            top: 3px; }
+          main .dealForm .gitConfig ul li:hover {
+            -webkit-transform: scale(1.04);
+            -ms-transform: scale(1.04);
+            -o-transform: scale(1.04);
+            -moz-transform: scale(1.04);
+            box-shadow: 2px 2px 5px #e4e4e4; }
+          main .dealForm .gitConfig ul li div {
+            display: inline-block; }
+          main .dealForm .gitConfig ul li .i {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url("../asset/user.svg"); }
+          main .dealForm .gitConfig ul li .k {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url("../asset/钥匙.svg"); }
+          main .dealForm .gitConfig ul li .s {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url("../asset/配置管理.svg"); }
+      main .dealForm .gitConfig .display-sitting {
+        width: 28vw;
+        height: 50%; }
+        main .dealForm .gitConfig .display-sitting div {
+          width: 28vw;
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+          main .dealForm .gitConfig .display-sitting div p {
+            margin-bottom: 15px;
+            width: 24vw;
+            height: 35px; }
+            main .dealForm .gitConfig .display-sitting div p input {
+              width: 20vw;
+              height: 30px; }
+          main .dealForm .gitConfig .display-sitting div button {
+            z-index: 10;
+            width: 80px;
+            height: 35px;
+            background-color: #127cf5;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            -webkit-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -moz-transition: all 1s ease; }
+            main .dealForm .gitConfig .display-sitting div button:hover {
+              background-color: rgba(8, 94, 192, 0.938); }
+            main .dealForm .gitConfig .display-sitting div button:active {
+              -webkit-transform: scale(0.6);
+              -ms-transform: scale(0.6);
+              -o-transform: scale(0.6);
+              -moz-transform: scale(0.6); }
+          main .dealForm .gitConfig .display-sitting div textarea {
+            padding: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            resize: none;
+            font-size: 15px;
+            outline: none; }
+        main .dealForm .gitConfig .display-sitting .gitlist {
+          font-size: 15px; }
+    main .dealForm .information {
+      overflow: hidden;
+      width: 28vw;
+      height: 90vh; }
+      main .dealForm .information .init_infor {
+        width: 28vw;
+        height: 35vh; }
+        main .dealForm .information .init_infor .current_info {
+          text-align: center;
+          width: 28vw;
+          height: 10vh;
+          line-height: 10vh; }
+        main .dealForm .information .init_infor .action_now {
+          width: 27vw;
+          height: 25vh;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          position: relative; }
+          main .dealForm .information .init_infor .action_now button {
+            border: none;
+            margin-top: 10px;
+            outline: none;
+            width: 90px;
+            height: 35px;
+            text-align: center;
+            line-height: 25px;
+            background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+            box-shadow: 2px 5px 10px #e4e4e4;
+            overflow: hidden; }
+            main .dealForm .information .init_infor .action_now button:active {
+              position: relative;
+              top: 3px; }
+          main .dealForm .information .init_infor .action_now .inall {
+            width: 27vw;
+            height: 20px;
+            position: absolute;
+            bottom: 0; }
+            main .dealForm .information .init_infor .action_now .inall label {
+              vertical-align: top;
+              float: right; }
+            main .dealForm .information .init_infor .action_now .inall input {
+              float: right;
+              width: 20px;
+              height: 20px;
+              outline: none;
+              margin-left: 5px; }
+            main .dealForm .information .init_infor .action_now .inall:after {
+              content: '';
+              clear: both;
+              display: block; }
+      main .dealForm .information .repoContainer {
+        position: absolute;
+        bottom: 0;
+        width: 28vw;
+        height: 55vh;
+        overflow: hidden; }
+        main .dealForm .information .repoContainer .repoWrapper {
+          width: 30vw;
+          height: 55vh;
+          overflow-y: auto; }
+          main .dealForm .information .repoContainer .repoWrapper .repo {
+            display: flex;
+            justify-content: space-around;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            width: 28vw; }
+      main .dealForm .information .dir {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; }
+        main .dealForm .information .dir:hover {
+          background-color: #eeeeee; }
+        main .dealForm .information .dir span {
+          display: inline-block;
+          width: 100px;
+          height: 20px;
+          text-overflow: ellipsis;
+          text-align: center; }
+        main .dealForm .information .dir .folder {
+          background: url(../asset/文件夹未共享.svg);
+          background-size: cover;
+          width: 55px;
+          height: 55px; }
+        main .dealForm .information .dir .img {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_jpg.svg); }
+        main .dealForm .information .dir .gif {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_gif.svg); }
+        main .dealForm .information .dir .png {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_png.svg); }
+        main .dealForm .information .dir .java {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_java.svg); }
+        main .dealForm .information .dir .php {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_php.svg); }
+        main .dealForm .information .dir .html {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_html.svg); }
+        main .dealForm .information .dir .css {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_css.svg); }
+        main .dealForm .information .dir .txt {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_txt.svg); }
+        main .dealForm .information .dir .bin {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_bin.svg); }
+        main .dealForm .information .dir .js {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_js.svg); }
+        main .dealForm .information .dir .zip {
+          background-size: cover;
+          width: 55px;
+          height: 55px;
+          background: url(../asset/iconfinder_zip.svg); }
+      main .dealForm .information .marked {
+        background-color: #eeeeee; }
+  main .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 5px; }
+    main .container ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: space-around;
+      align-content: space-around;
+      position: relative; }
+      main .container ul li {
+        width: 27vw;
+        height: 17vh;
+        border-radius: 15px;
+        background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+        box-shadow: 2px 5px 10px #e4e4e4;
+        border: 0.5px solid #cccccc;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        main .container ul li:active {
+          position: relative;
+          top: 3px; }
+        main .container ul li .icon1 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/创建任务模板.svg);
+          background-size: cover; }
+        main .container ul li .icon2 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/分支模板.svg);
+          background-size: cover; }
+        main .container ul li .icon3 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/最近服务资源模板.svg);
+          background-size: cover; }
+        main .container ul li .icon4 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/字符串处理模板.svg);
+          background-size: cover; }
+        main .container ul li .icon5 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/子策略模板.svg);
+          background-size: cover; }
+        main .container ul li .icon6 {
+          width: 50px;
+          height: 50px;
+          background-image: url(../asset/留言模板.svg);
+          background-size: cover; }
+  main .menuBtn {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    overflow: hidden; }
+    main .menuBtn ul {
+      box-sizing: border-box;
+      background: #d6d6d6;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      main .menuBtn ul li {
+        list-style: none;
+        width: 30px;
+        height: 5px;
+        background-color: #7c7b7b;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease; }
+    main .menuBtn:hover ul {
+      -webkit-transform: translate(6px, -3px);
+      -ms-transform: translate(6px, -3px);
+      -o-transform: translate(6px, -3px);
+      -moz-transform: translate(6px, -3px); }
+      main .menuBtn:hover ul li {
+        -webkit-transform: translate(-6px, 6px);
+        -ms-transform: translate(-6px, 6px);
+        -o-transform: translate(-6px, 6px);
+        -moz-transform: translate(-6px, 6px); }
+    main .menuBtn:active ul li {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -moz-transform: scale(0.8); }
+
+.inform {
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+  background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+  border: 0.5px solid #cccccc;
+  font-size: 20px;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  z-index: 10;
+  border-radius: 10px;
+  -webkit-animation: inform 0.5s ease;
+  -ms-animation: inform 0.5s ease;
+  -o-animation: inform 0.5s ease;
+  -moz-animation: inform 0.5s ease;
+  text-align: center; }
+
+.addUrl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .addUrl .cancel {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    top: 5px;
+    background-image: url(../asset/取消.svg);
+    background-size: cover;
+    -webkit-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s; }
+    .addUrl .cancel:hover {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -moz-transform: rotate(45deg); }
+  .addUrl div input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px; }
+  .addUrl button {
+    z-index: 10;
+    width: 80px;
+    height: 35px;
+    background-color: #127cf5;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease; }
+    .addUrl button:hover {
+      background-color: rgba(8, 94, 192, 0.938); }
+    .addUrl button:active {
+      -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      -moz-transform: scale(0.6); }
+
+.addPath {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .addPath .cancel {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    top: 5px;
+    background-image: url(../asset/取消.svg);
+    background-size: cover;
+    -webkit-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s; }
+    .addPath .cancel:hover {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -moz-transform: rotate(45deg); }
+  .addPath div {
+    width: 300px;
+    height: 100px; }
+    .addPath div textarea {
+      width: 300px;
+      height: 100px;
+      resize: none;
+      font-size: 20px;
+      text-decoration: none; }
+  .addPath button {
+    z-index: 10;
+    width: 80px;
+    height: 35px;
+    background-color: #127cf5;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease; }
+    .addPath button:hover {
+      background-color: rgba(8, 94, 192, 0.938); }
+    .addPath button:active {
+      -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      -moz-transform: scale(0.6); }
+
+@keyframes inform {
+  from {
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    -o-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px); }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0); } }
+
+/*# sourceMappingURL=index.css.map */

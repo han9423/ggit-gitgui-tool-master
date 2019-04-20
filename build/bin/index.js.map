@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/bin/index.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA;;;;MAAA,GAAA,EAAA,IAAA,EAAA,EAAA,EAAA,KAAA,EAAA,YAAA,EAAA,IAAA,EAAA,KAAA,EAAA,SAAA,EAAA,GAAA,EAAA;;EAAA,OAAA,CAAQ,oBAAR,CAA6B,CAAC,OAA9B,CAAA;;EACA,KAAA,GAAQ,OAAA,CAAQ,OAAR;;EACR,IAAA,GAAO,OAAA,CAAQ,MAAR;;EACP,EAAA,GAAK,OAAA,CAAQ,IAAR;;EACL,SAAA,GAAY,OAAA,CAAQ,oBAAR;;EACZ,CAAA,CAAE,GAAF,EAAQ,KAAR,EAAe,IAAf,CAAA,GAAwB,OAAA,CAAQ,OAAR,CAAxB;;EACA,GAAA,GAAM,OAAA,CAAQ,QAAR;;EAEN,GAAA,GAAM,IAAI,CAAC,YAAL,CAAkB,GAAlB;;EAON,YAAA,GAAe,QAAA,CAAA,CAAA;IACX,OAAO,CAAC,GAAR,CAAY,GAAA,CAAI,sCAAJ,CAAZ;WACA,UAAA,CAAW,CAAC,QAAA,CAAA,CAAA;aACR,GAAG,CAAC,MAAJ,CAAW,IAAX,EAAiB,WAAjB,EAA8B,QAAA,CAAA,CAAA;QAC1B,OAAO,CAAC,GAAR,CAAY,IAAA,CAAK,qBAAL,CAAZ;eACA,SAAA,CAAU,IAAV;MAF0B,CAA9B;IADQ,CAAD,CAAX,EAKG,IALH;EAFW;;EASf,GAAG,CAAC,EAAJ,CAAO,OAAP,EAAgB,QAAA,CAAC,GAAD,CAAA;AACZ,YAAO,GAAG,CAAC,IAAX;AAAA,WACS,YADT;eAEU,YAAA,CAAA;AAFV,WAIS,QAJT;eAKS,OAAO,CAAC,GAAR,CAAY,GAAA,CAAI,WAAJ,CAAZ;AALT;EADY,CAAhB;;EAWA,GAAG,CAAC,MAAJ,CAAW,IAAX,EAAiB,WAAjB,EAA8B,QAAA,CAAA,CAAA;AAC1B,QAAA;IAAA,IAA2B,WAA3B;MAAA,OAAA,GAAU,GAAG,CAAC,OAAJ,CAAA,EAAV;;IACA,OAAO,CAAC,GAAR,CAAY,KAAA,CAAM,CAAA,eAAA,CAAA,CAAkB,OAAO,CAAC,OAA1B,EAAA,CAAA,CAAqC,OAAO,CAAC,IAA7C,CAAA,CAAN,CAAZ;IACA,OAAO,CAAC,GAAR,CAAY,eAAZ;WACA,UAAA,CAAW,QAAA,CAAA,CAAA;aACP,SAAA,CAAU,OAAO,CAAC,IAAlB;IADO,CAAX,EAEE,IAFF;EAJ0B,CAA9B;AAnCA",
+  "sourcesContent": [
+    "require('source-map-support').install()\nhttps = require 'https'\nhttp = require 'http'\nfs = require 'fs'\nopBrowser = require '../utils/opBrowser'\n{ red , green, blue } = require 'chalk'\napp = require '../app'\n\nsrv = http.createServer app\n\n###\n@param {Object} server\n###\n\n\nhandle_inuse = ->\n    console.log red 'port 1031 in use, change 5s later...'\n    setTimeout (->\n        srv.listen(1033, 'localhost', ->\n            console.log blue 'port change to 1033'\n            opBrowser 1033\n        )\n    ), 5000\n\nsrv.on('error', (err) ->\n    switch err.code\n        when 'EADDRINUSE'\n        then  handle_inuse()\n\n        when 'ACCESS'\n        then console.log red 'no access'\n)\n\n\n\nsrv.listen(1031, 'localhost', () ->\n    address = srv.address() if srv?\n    console.log green(\"App running on #{address.address} #{address.port}\")\n    console.log '3s 后跳转到浏览器...'\n    setTimeout(->\n        opBrowser address.port\n    , 3000)\n)\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "clone.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "src/controller/clone/clone.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,SAAA,EAAA,QAAA,EAAA,IAAA,EAAA,QAAA,EAAA;;EAAA,SAAA,GAAY,OAAA,CAAQ,uBAAR;;EACZ,QAAA,GAAW,OAAA,CAAQ,UAAR;;EACX,CAAA,CAAE,IAAF,CAAA,GAAW,OAAA,CAAQ,eAAR,CAAX;;EACA,CAAA,CAAE,GAAF,CAAA,GAAU,OAAA,CAAQ,OAAR,CAAV,EAHA;;;EAOA,QAAA,GAAW,QAAA,CAAC,GAAD,CAAA;AACP,QAAA;IAAA,UAAA,GAAc;WAQd,UAAU,CAAC,IAAX,CAAgB,GAAhB;EATO;;EAWX,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAC,GAAD,EAAM,GAAN,CAAA;AACb,QAAA,SAAA,EAAA;IAAA,CAAA,CAAE,GAAF,EAAO,SAAP,CAAA,GAAqB,GAAG,CAAC,IAAzB;IACA,IAAG,QAAH;aACI,SAAA,CAAU,SAAV,CAAoB,CAAC,IAArB,CAA0B,QAAA,CAAA,CAAA;eACtB,IAAA,CAAK,CAAA,UAAA,CAAA,CAAa,GAAb,CAAA,CAAL,EAAyB;UAAE,GAAA,EAAK;QAAP,CAAzB,EAA6C,QAAA,CAAC,GAAD,EAAM,MAAN,EAAc,KAAd,CAAA;UACzC,OAAO,CAAC,GAAR,CAAa,KAAK,CAAC,QAAN,CAAA,CAAb;UACA,IAAG,GAAH;YACI,OAAO,CAAC,MAAM,CAAC,KAAf,CAAqB,GAAA,CAAI,GAAJ,CAArB;YACA,GAAG,CAAC,IAAJ,CAAS;cAAE,IAAA,EAAM,CAAR;cAAW,OAAA,EAAS,GAAG,CAAC,QAAJ,CAAA;YAApB,CAAT;mBACA,GAAG,CAAC,GAAJ,CAAA,EAHJ;WAAA,MAAA;YAKI,GAAG,CAAC,IAAJ,CAAS;cAAE,IAAA,EAAM,CAAR;cAAW,OAAA,EAAS,KAAK,CAAC,QAAN,CAAA;YAApB,CAAT;mBACA,GAAG,CAAC,GAAJ,CAAA,EANJ;;QAFyC,CAA7C;MADsB,CAA1B,CAWC,CAAC,KAXF,CAWQ,QAAA,CAAC,GAAD,CAAA,EAAA;;;;eAIJ,GAAG,CAAC,IAAJ,CAAS,GAAT;MAJI,CAXR,EADJ;KAAA,MAAA;aAmBI,GAAG,CAAC,IAAJ,CAAS;QAAE,IAAA,EAAM,CAAR;QAAW,OAAA,EAAS;MAApB,CAAT,EAnBJ;;EAFa;AAlBjB",
+  "sourcesContent": [
+    "checkPath = require '../../utils/checkPath'\nreadline = require 'readline'\n{ exec } = require 'child_process'\n{ red } = require 'chalk'\n\n\n# check uri\ncheckUri = (uri) ->\n    base_check =  ///\n                        ^((ht|f)tps?):\n                        \\/\\/([\\w\\-]+\n                        (\\.[\\w\\-]+)*\\/)*\n                        [\\w\\-]+(\\.[\\w\\-]+)*\n                        \\/?(\\?([\\w\\-\\.,@?^=%&:\\/~\\+#]*\n                        )+)?\n                        ///\n    base_check.test uri\n\nmodule.exports = (req, res) ->\n    { uri, localpath } = req.body\n    if checkUri\n        checkPath(localpath).then(() ->\n            exec(\"git clone #{uri}\", { cwd: localpath }, (err, stdout, stdin) ->\n                console.log  stdin.toString()\n                if err\n                    process.stdout.write red(err)\n                    res.send { code: 0, err_msg: err.toString() }\n                    res.end()\n                else\n                    res.send { code: 1, srv_msg: stdin.toString() }\n                    res.end()\n            )\n        ).catch((err) ->\n            ###\n                {code:0, err_msg:没有这个目录}\n            ###\n            res.send err\n        )\n    else\n        res.send { code: 0, err_msg: 'uri地址格式不正确' }\n\n\n\n\n"
+  ]
+}

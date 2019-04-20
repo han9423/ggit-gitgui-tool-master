@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "checkPath.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/utils/checkPath.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,UAAA,EAAA;;EAAA,CAAA,CAAE,UAAF,CAAA,GAAiB,OAAA,CAAQ,MAAR,CAAjB;;EACA,YAAA,GAAe,OAAO,CAAC,GAAR,CAAA;;EAGf,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAC,IAAD,CAAA;WACb,IAAI,OAAJ,CAAY,QAAA,CAAC,OAAD,EAAU,MAAV,CAAA;AACR,UAAA;MAAA,IAAG,UAAA,CAAW,IAAX,CAAH;AACI;UACI,OAAO,CAAC,KAAR,CAAc,IAAd,EADJ;SAAA,cAAA;UAEM;UACF,MAAA,CAAO;YAAE,IAAA,EAAM,CAAR;YAAW,OAAA,EAAS,CAAA,CAAA,CAAG,IAAH,CAAQ,OAAR;UAApB,CAAP,EAHJ;;eAKA,OAAA,CAAQ;UAAE,IAAA,EAAM;QAAR,CAAR,EANJ;OAAA,MAAA;eAQI,MAAA,CAAO;UAAE,IAAA,EAAM,CAAR;UAAW,OAAA,EAAS,CAAA,CAAA,CAAG,IAAH,CAAQ,OAAR;QAApB,CAAP,EARJ;;IADQ,CAAZ;EADa;AAJjB",
+  "sourcesContent": [
+    "{ isAbsolute } = require 'path'\noriginalPath = process.cwd()\n\n\nmodule.exports = (path) ->\n    new Promise((resolve, reject) ->\n        if isAbsolute(path)\n            try\n                process.chdir path\n            catch error\n                reject { code: 0, err_msg: \"#{path} 没有这个路径\" }\n            \n            resolve { code: 1 }\n        else\n            reject { code: 0, err_msg: \"#{path} 不是绝对路径\" }\n    )"
+  ]
+}

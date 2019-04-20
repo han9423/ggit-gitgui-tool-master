@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "opBrowser.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/utils/opBrowser.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,IAAA,EAAA,QAAA,EAAA;;EAAA,CAAA,CAAE,QAAF,CAAA,GAAe,OAAA,CAAQ,IAAR,CAAf;;EACA,CAAA,CAAE,IAAF,CAAA,GAAW,OAAA,CAAQ,eAAR,CAAX;;EACA,GAAA,GAAM;;EAEN,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAC,IAAD,CAAA;AACb,QAAA;IAAA,OAAO,CAAC,GAAR,CAAY,QAAA,CAAA,CAAZ;AACA,YAAO,QAAA,CAAA,CAAP;AAAA,WACS,OADT;QAES,QAAA,GAAW;AADX;AADT,WAGS,OAHT;QAIS,QAAA,GAAW;AADX;AAHT,WAKS,QALT;QAMS,QAAA,GAAW;AADX;AALT;AAOS,eAAO;AAPhB;WAQA,IAAA,CAAK,CAAA,CAAA,CAAG,QAAH,EAAA,CAAA,CAAe,GAAf,CAAmB,CAAnB,CAAA,CAAsB,IAAtB,CAAA,CAAL;EAVa;AAJjB",
+  "sourcesContent": [
+    "{ platform } = require 'os'\n{ exec } = require 'child_process'\nurl = 'http://localhost'\n\nmodule.exports = (port) ->\n    console.log platform()\n    switch platform()\n        when 'linux'\n        then terminal = 'xdg-open'\n        when 'win32'\n        then terminal = 'start'\n        when 'darwin'\n        then terminal = 'open'\n        else return 'not support this platform'\n    exec(\"#{terminal} #{url}:#{port}\")\n"
+  ]
+}

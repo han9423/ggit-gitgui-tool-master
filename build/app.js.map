@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "app.js",
+  "sourceRoot": "..",
+  "sources": [
+    "src/app.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA;;;;;;;AAAA,MAAA,GAAA,EAAA,OAAA,EAAA,YAAA,EAAA,WAAA,EAAA;;EAQA,OAAA,GAAU,OAAA,CAAQ,SAAR;;EACV,CAAA,CAAE,aAAF,EAAiB,WAAjB,EAA8B,YAA9B,CAAA,GAA+C,OAAA,CAAQ,iBAAR,CAA/C;;EAEA,GAAA,GAAM,OAAA,CAAA;;EAEN,aAAA,CAAc,GAAd;;EACA,WAAA,CAAY,GAAZ;;EACA,YAAA,CAAa,GAAb;;EAEA,MAAM,CAAC,OAAP,GAAiB;AAjBjB",
+  "sourcesContent": [
+    "###\n@author sewerganger <wanghan9423@outlook.com>\n@copyright random\n@version 0.01\n@license MIT\n@description  build a git gui tool on broswer\n###\n\nexpress = require 'express'\n{ setStaticPath, setPostData, setOpenIndex } = require './config/config'\n\napp = express()\n\nsetStaticPath app\nsetPostData app\nsetOpenIndex app\n\nmodule.exports = app\n\n\n"
+  ]
+}

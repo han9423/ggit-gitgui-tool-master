@@ -1,0 +1,33 @@
+extends layout
+
+block scriptst
+    script(src="javascripts/libs/jquery.min.js")
+block css
+    link(rel="stylesheet" href="css/index.css")
+block main
+    main
+        div.logo
+            div.profile
+            span GGit
+        div.container
+            ul
+        div.dealForm
+            div.information 
+        div.menuBtn
+            div.sideBtn 
+                ul 
+                    -for(let i=0;i<3;i++)
+                        li
+block footer
+    footer 
+        div.introduction
+            a(href="https://github.com/sewerlabour?tab=repositories")
+                p GGit git-gui-tool
+                span powered by wanghan
+
+block aside
+    aside
+        div.asideContainer
+block scriptsb
+    script(src="javascripts/index.js" type="text/javascript")
+    script(src="javascripts/funcList.js" type="text/javascript")

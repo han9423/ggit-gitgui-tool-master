@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/routes/index.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,KAAA,EAAA,YAAA,EAAA,WAAA,EAAA,OAAA,EAAA,KAAA,EAAA,IAAA,EAAA,cAAA,EAAA;;EAAA,OAAA,GAAU,OAAA,CAAQ,SAAR;;EACV,CAAA,CAAE,IAAF,EAAQ,WAAR,CAAA,GAAwB,OAAA,CAAQ,yBAAR,CAAxB;;EACA,KAAA,GAAQ,OAAA,CAAQ,2BAAR;;EACR,YAAA,GAAe,OAAA,CAAQ,yBAAR;;EACf,cAAA,GAAiB,OAAA,CAAQ,uBAAR;;EACjB,KAAA,GAAQ,OAAA,CAAQ,8BAAR;;EAER,MAAA,GAAS,OAAO,CAAC,MAAR,CAAA;;EAET,MAAM,CAAC,GAAP,CAAW,GAAX,EAAgB,KAAhB;;EACA,MAAM,CAAC,GAAP,CAAW,eAAX,EAA4B,IAA5B;;EACA,MAAM,CAAC,GAAP,CAAW,QAAX,EAAqB,KAArB;;EACA,MAAM,CAAC,GAAP,CAAW,SAAX,EAAuB,YAAvB;;EACA,MAAM,CAAC,GAAP,CAAW,WAAX,EAAwB,cAAxB;;EAIA,MAAM,CAAC,OAAP,GAAiB;AAjBjB",
+  "sourcesContent": [
+    "express = require 'express'\n{ init, currentFile } = require '../controller/init/init'\nclone = require '../controller/clone/clone'\nconfigRouter = require './gitconfig/r_gitconfig'\noperatorRouter = require './operator/r_operator'\nindex = require '../controller/homePage/index'\n\nrouter = express.Router()\n\nrouter.get('/', index)\nrouter.put('/init/:action', init)\nrouter.put('/clone', clone)\nrouter.use('/config',  configRouter)\nrouter.use('/operator', operatorRouter)\n\n\n\nmodule.exports = router\n\n\n"
+  ]
+}

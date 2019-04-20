@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "spawnCmd.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/utils/spawnCmd.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,SAAA,EAAA,YAAA,EAAA,GAAA,EAAA,KAAA,EAAA;;EAAA,CAAA,CAAE,KAAF,EAAS,SAAT,CAAA,GAAuB,OAAA,CAAQ,eAAR,CAAvB;;EACA,SAAA,GAAY,OAAA,CAAQ,oBAAR;;EACZ,CAAA,CAAE,GAAF,CAAA,GAAU,OAAA,CAAQ,OAAR,CAAV;;EAGA,YAAA,GAAe,OAAO,CAAC,GAAR,CAAA,EALf;;;;;;EAaA,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAC,GAAD,EAAM,IAAN,EAAY,OAAZ,EAAqB,OAAO,OAA5B,CAAA;WAEb,IAAI,OAAJ,CAAY,QAAA,CAAC,OAAD,EAAU,MAAV,CAAA;MACR,IAAG,IAAA,KAAQ,OAAX;QACI,IAAG,SAAS,CAAC,MAAV,KAAoB,CAAvB;UACI,GAAA,GAAM,KAAA,CAAM,GAAN,EADV;SAAA,MAAA;AAAA;;QAGA,GAAA,GAAM,KAAA,CAAM,GAAN,EAAW,IAAX,EAAiB,OAAjB,EAJV;OAAA,MAAA;QAMI,GAAA,GAAM,SAAA,CAAU,GAAV,EAAe,IAAf,EAAqB,OAArB,EANV;;MAQA,GAAG,CAAC,MAAM,CAAC,EAAX,CAAc,MAAd,EAAsB,QAAA,CAAC,IAAD,CAAA;eAClB,OAAA,CAAQ;UAAE,IAAA,EAAM,CAAR;UAAW,IAAA,EAAM,IAAI,CAAC,QAAL,CAAA;QAAjB,CAAR;MADkB,CAAtB;aAGA,GAAG,CAAC,MAAM,CAAC,EAAX,CAAc,MAAd,EAAsB,QAAA,CAAC,GAAD,CAAA;eAClB,MAAA,CAAO;UAAE,IAAA,EAAM,CAAR;UAAW,OAAA,EAAS,GAAG,CAAC,QAAJ,CAAA;QAApB,CAAP;MADkB,CAAtB;IAZQ,CAAZ;EAFa;;EAbjB;;;;AAAA",
+  "sourcesContent": [
+    "{ spawn, spawnSync } = require 'child_process'\ncheckPath = require '../utils/checkPath'\n{ red } = require 'chalk'\n\n\noriginalPath = process.cwd()\n\n###\n@return stdout stderr\n@param {Array} argv\n###\n\n\nmodule.exports = (cmd, argv, options, type = 'async') ->\n\n    new Promise((resolve, reject) ->\n        if type is 'async'\n            if arguments.length is 1\n                cmd = spawn(cmd)\n            else\n            cmd = spawn(cmd, argv, options)\n        else\n            cmd = spawnSync(cmd, argv, options)\n        \n        cmd.stdout.on('data', (data) ->\n            resolve { code: 1, data: data.toString() }\n        )\n        cmd.stderr.on('data', (err) ->\n            reject { code: 0, err_msg: err.toString() }\n        )\n    )\n    # module.exports = (cmd, argv, options) ->\n    #     handleSpawn(cmd, argv, options).then((val) ->\n    #         consoel.log val\n    #     )\n"
+  ]
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 60vw;
+  height: 70vh;
+  border-radius: 5px; }
+  .container ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    align-content: space-around;
+    position: relative; }
+    .container ul li {
+      width: 27vw;
+      height: 17vh;
+      border-radius: 15px;
+      background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+      box-shadow: 2px 5px 10px #e4e4e4;
+      border: 0.5px solid #cccccc;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .container ul li:active {
+        position: relative;
+        top: 3px; }
+      .container ul li .icon1 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/创建任务模板.svg);
+        background-size: cover; }
+      .container ul li .icon2 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/分支模板.svg);
+        background-size: cover; }
+      .container ul li .icon3 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/最近服务资源模板.svg);
+        background-size: cover; }
+      .container ul li .icon4 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/字符串处理模板.svg);
+        background-size: cover; }
+      .container ul li .icon5 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/子策略模板.svg);
+        background-size: cover; }
+      .container ul li .icon6 {
+        width: 50px;
+        height: 50px;
+        background-image: url(../asset/留言模板.svg);
+        background-size: cover; }
+
+/*# sourceMappingURL=container.css.map */

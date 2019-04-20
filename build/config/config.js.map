@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "config.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/config/config.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,MAAA,EAAA,WAAA,EAAA,OAAA,EAAA,KAAA,EAAA;;EAAA,OAAA,GAAU,OAAA,CAAQ,SAAR;;EACV,WAAA,GAAc,OAAA,CAAQ,aAAR;;EACd,CAAA,CAAE,OAAF,CAAA,GAAc,OAAA,CAAQ,MAAR,CAAd;;EACA,KAAA,GAAQ,OAAA,CAAQ,iBAAR;;EAGF,SAAN,MAAA,OAAA;IAEI,SAAW,CAAC,GAAD,CAAA;MACP,GAAG,CAAC,GAAJ,CAAQ,aAAR,EAAuB,MAAvB;MACA,GAAG,CAAC,GAAJ,CAAQ,OAAR,EAAiB,OAAjB;aACA,GAAG,CAAC,MAAJ,CAAW,MAAX,EAAmB,WAAW,CAAC,GAA/B;IAHO;;IAKX,aAAe,CAAC,GAAD,CAAA;AACX,UAAA;MAAA,UAAA,GAAa,OAAA,CAAQ,OAAO,CAAC,GAAR,CAAA,CAAR,EAAuB,UAAvB;aACb,GAAG,CAAC,GAAJ,CAAQ,OAAO,CAAC,MAAR,CAAe,UAAf,CAAR;IAFW;;IAIf,WAAa,CAAC,GAAD,CAAA;MACT,GAAG,CAAC,GAAJ,CAAQ,OAAO,CAAC,IAAR,CAAA,CAAR;aACA,GAAG,CAAC,GAAJ,CAAQ,OAAO,CAAC,UAAR,CAAmB;QACvB,QAAA,EAAU,KADa;QAEvB,KAAA,EAAO,CAAA,GAAI,IAAA,IAAQ;MAFI,CAAnB,CAAR;IAFS;;IAMb,YAAc,CAAC,GAAD,CAAA;aACV,GAAG,CAAC,GAAJ,CAAQ,KAAR;IADU;;EAjBlB;;EAoBA,MAAM,CAAC,OAAP,GAAiB,IAAI,MAAJ,CAAA;AA1BjB",
+  "sourcesContent": [
+    "express = require 'express'\nconsolidate = require 'consolidate'\n{ resolve } = require 'path'\nindex = require '../routes/index'\n\n\nclass Config\n\n    setEngine: (app) ->\n        app.set('view engine', 'html')\n        app.set('views', 'views')\n        app.engine('html', consolidate.pug)\n\n    setStaticPath: (app) ->\n        staticPath = resolve(process.cwd(), './public')\n        app.use(express.static(staticPath))\n\n    setPostData: (app) ->\n        app.use(express.json())\n        app.use(express.urlencoded({\n            extended: false,\n            limit: 6 * 1024 ** 2\n        }))\n    setOpenIndex: (app) ->\n        app.use(index)\n    \nmodule.exports = new Config()\n\n\n\n"
+  ]
+}

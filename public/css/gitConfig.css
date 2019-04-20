@@ -1,0 +1,98 @@
+@charset "UTF-8";
+.gitConfig {
+  width: 28vw;
+  height: 100%; }
+  .gitConfig ul {
+    width: 28vw;
+    height: 50%; }
+    .gitConfig ul li {
+      margin: 15px auto;
+      list-style: none;
+      width: 25vw;
+      height: 60px;
+      background-image: -webkit-linear-gradient(#fdfdfd, #fbfbfb);
+      box-shadow: 2px 5px 10px #e4e4e4;
+      border: 0.5px solid #cccccc;
+      -webkit-transition: all 0.6s;
+      -ms-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gitConfig ul li:active {
+        position: relative;
+        top: 3px; }
+      .gitConfig ul li:hover {
+        -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+        -o-transform: scale(1.04);
+        -moz-transform: scale(1.04);
+        box-shadow: 2px 2px 5px #e4e4e4; }
+      .gitConfig ul li div {
+        display: inline-block; }
+      .gitConfig ul li .i {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-image: url("../asset/user.svg"); }
+      .gitConfig ul li .k {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-image: url("../asset/钥匙.svg"); }
+      .gitConfig ul li .s {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-image: url("../asset/配置管理.svg"); }
+  .gitConfig .display-sitting {
+    width: 28vw;
+    height: 50%; }
+    .gitConfig .display-sitting div {
+      width: 28vw;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .gitConfig .display-sitting div p {
+        margin-bottom: 15px;
+        width: 24vw;
+        height: 35px; }
+        .gitConfig .display-sitting div p input {
+          width: 20vw;
+          height: 30px; }
+      .gitConfig .display-sitting div button {
+        z-index: 10;
+        width: 80px;
+        height: 35px;
+        background-color: #127cf5;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        -webkit-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -moz-transition: all 1s ease; }
+        .gitConfig .display-sitting div button:hover {
+          background-color: rgba(8, 94, 192, 0.938); }
+        .gitConfig .display-sitting div button:active {
+          -webkit-transform: scale(0.6);
+          -ms-transform: scale(0.6);
+          -o-transform: scale(0.6);
+          -moz-transform: scale(0.6); }
+      .gitConfig .display-sitting div textarea {
+        padding: 10px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        resize: none;
+        font-size: 15px;
+        outline: none; }
+    .gitConfig .display-sitting .gitlist {
+      font-size: 15px; }
+
+/*# sourceMappingURL=gitConfig.css.map */

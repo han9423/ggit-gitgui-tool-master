@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "src/controller/homePage/index.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,IAAA,EAAA,GAAA,EAAA;;EAAA,CAAA,CAAE,IAAF,CAAA,GAAW,OAAA,CAAQ,eAAR,CAAX;;EACA,CAAA,CAAE,GAAF,CAAA,GAAU,OAAA,CAAQ,OAAR,CAAV;;EACA,QAAA,GAAW,OAAA,CAAQ,sBAAR;;EAGX,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAC,GAAD,EAAM,GAAN,CAAA;AACb,QAAA;IAAA,IAAiB,WAAjB;MAAA,CAAA,CAAE,GAAF,CAAA,GAAU,GAAV,EAAA;;WACA,QAAA,CAAS,KAAT,CAAe,CAAC,IAAhB,CAAsB,QAAA,CAAC,GAAD,CAAA;aAClB,GAAG,CAAC,MAAJ,CAAW,WAAX,EAAwB;QAAE,KAAA,EAAO;MAAT,CAAxB;IADkB,CAAtB,CAEK,CAAC,KAFN,CAEY,QAAA,CAAC,GAAD,CAAA;MACJ,OAAO,CAAC,GAAR,CAAY,GAAZ;MACA,IAAG,GAAH;eACI,GAAG,CAAC,MAAJ,CAAW,YAAX,EADJ;;IAFI,CAFZ;EAFa;AALjB",
+  "sourcesContent": [
+    "{ exec } = require 'child_process'\n{ red } = require 'chalk'\nspawnCmd = require '../../utils/spawnCmd'\n\n\nmodule.exports = (req, res) ->\n    { url } = req if req?\n    spawnCmd('git').then( (val) ->\n        res.render('index.pug', { index: 'dasdsa' })\n        ).catch((err) ->\n            console.log(err)\n            if err\n                res.render('no-git.pug')\n    )\n    \n"
+  ]
+}

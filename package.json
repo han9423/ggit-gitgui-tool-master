@@ -1,0 +1,25 @@
+{
+  "name": "GGit-gitgui-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "coffee -c -m -w -o build src",
+    "start": "node ./build/bin/index.js",
+    "dev": "supervisor ./build/bin/index.js",
+    "scss": "sass --watch public/scss:public/css"
+  },
+  "bin": {
+    "ggit": "./build/bin/w"
+  },
+  "author": "wanghan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "source-map-support": "^0.5.9"
+  }
+}

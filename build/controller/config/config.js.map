@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "config.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "src/controller/config/config.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,MAAA,EAAA,YAAA,EAAA;;EAAA,QAAA,GAAW,OAAA,CAAQ,6BAAR;;EACX,YAAA,GAAe,MAAA,CAAO,cAAP,EADf;;;;;EAUM,SAAN,MAAA,OAAA;IACI,WAAa,CAAA,CAAA,EAAA,CAAb;;;;IAIA,UAAY,CAAC,GAAD,EAAM,GAAN,CAAA,EAAA;;EALhB,EAVA;;;EAqBA,IAAG,CAAI,MAAO,CAAA,YAAA,CAAd;IACI,MAAO,CAAA,YAAA,CAAP,GAAuB,IAAI,MAAJ,CAAA,EAD3B;;;EAGA,MAAM,CAAC,OAAP,GAAiB,MAAO,CAAA,YAAA;AAxBxB",
+  "sourcesContent": [
+    "spawnCmd = require '../../utils/spawnCmd.coffee'\nconfigCoffee = Symbol 'configCoffee'\n\n\n###\n@module config\n###\n\n\n\nclass Config\n    constructor: () ->\n        \n\n# intiConfig\n    initConfig: (req, res) ->\n\n\n\n\n# unique module\nif not global[configCoffee]\n    global[configCoffee] = new Config()\n\nmodule.exports = global[configCoffee]\n\n    \n\n\n\n\n\n\n"
+  ]
+}

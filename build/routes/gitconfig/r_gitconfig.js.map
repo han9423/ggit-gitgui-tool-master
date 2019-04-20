@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "r_gitconfig.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "src/routes/gitconfig/r_gitconfig.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,MAAA,EAAA,UAAA,EAAA,MAAA,EAAA,UAAA,EAAA;;EAAA,CAAA,CAAE,MAAF,CAAA,GAAa,OAAA,CAAQ,SAAR,CAAb;;EACA,CAAA,CAAE,UAAF,EAAc,MAAd,EAAsB,UAAtB,CAAA,GAAqC,OAAA,CAAQ,sCAAR,CAArC;;EAGA,MAAA,GAAS,MAAA,CAAA;;EAGT,MAAM,CAAC,GAAP,CAAW,aAAX,EAA0B,UAA1B;;EACA,MAAM,CAAC,IAAP,CAAY,SAAZ,EAAuB,MAAvB;;EACA,MAAM,CAAC,IAAP,CAAY,aAAZ,EAA2B,UAA3B;;EAEA,MAAM,CAAC,OAAP,GAAiB;AAXjB",
+  "sourcesContent": [
+    "{ Router } = require 'express'\n{ initConfig, getKey, configUser } = require '../../controller/gitconfig/gitconfig'\n\n\nrouter = Router()\n\n\nrouter.get '/initconfig', initConfig\nrouter.post '/getkey', getKey\nrouter.post '/configuser', configUser\n\nmodule.exports = router\n\n\n\n"
+  ]
+}

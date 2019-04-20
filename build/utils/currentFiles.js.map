@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "currentFiles.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/utils/currentFiles.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,EAAA,EAAA,QAAA,EAAA;;EAAA,EAAA,GAAK,OAAA,CAAQ,IAAR;;EACL,CAAA,CAAE,GAAF,CAAA,GAAU,OAAA,CAAQ,OAAR,CAAV;;EACA,QAAA,GAAW,OAAO,CAAC,GAAR,CAAA,EAFX;;;;EAOA,MAAM,CAAC,OAAP,GAAiB,QAAA,CAAE,IAAF,CAAA;WAEb,IAAI,OAAJ,CAAa,QAAA,CAAC,OAAD,EAAU,MAAV,CAAA;aACT,EAAE,CAAC,OAAH,CAAY,IAAZ,EAAkB,QAAA,CAAC,GAAD,EAAM,GAAN,CAAA;QACd,IAAG,GAAH;UACI,OAAO,CAAC,KAAR,CAAc,QAAd;iBACA,MAAA,CAAO;YAAE,IAAA,EAAM,CAAR;YAAW,OAAA,EAAS,CAAA,CAAA,CAAG,IAAH,CAAQ,MAAR;UAApB,CAAP,EAFJ;SAAA,MAAA;UAII,OAAO,CAAC,KAAR,CAAc,QAAd;iBACA,OAAA,CAAQ,GAAR,EALJ;;MADc,CAAlB;IADS,CAAb;EAFa;AAPjB",
+  "sourcesContent": [
+    "fs = require 'fs'\n{ red } = require 'chalk'\noriginal = process.cwd()\n\n# fileDir = (name) ->\n    # fs.stat(name)\n\nmodule.exports = ( path ) ->\n\n    new Promise( (resolve, reject) ->\n        fs.readdir( path, (err, dir) ->\n            if err\n                process.chdir original\n                reject { code: 0, err_msg: \"#{path}目录读取错误\" }\n            else\n                process.chdir original\n                resolve dir\n        )\n    )\n"
+  ]
+}
